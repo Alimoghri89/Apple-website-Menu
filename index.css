@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li,
+a {
+  text-decoration: none;
+  list-style: none;
+  color: azure;
+}
+.header-container {
+  width: 100%;
+  background-color: #444445;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+}
+.menu-container {
+  width: 100%;
+  height: 45px;
+  margin: 0 15%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.apple-icon {
+  width: 45px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.apple-icon i {
+  font-size: 20px;
+  color: azure;
+}
+.menu-title {
+  width: calc(100% - 45px + 90px);
+  height: 100%;
+}
+.menu-title ul {
+  display: flex;
+  justify-content: space-around;
+  line-height: 45px;
+}
+.menu-title ul li a {
+  display: inline-block;
+  height: 100%;
+}
+.sr-icon {
+  width: 90px;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.sr-icon i {
+  font-size: 20px;
+  color: azure;
+}
+/* ------------------------------------------sub-menu--------------------------> */
+.menu-container ul li a div.submenu-bg {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  left: 0;
+  bottom: 45px;
+  transition: 500;
+  backdrop-filter: saturate(20%) blur(4px);
+}
+
+.menu-container ul li div.submenu {
+  width: 100vw;
+  height: calc(50vh);
+  position: absolute;
+  background-color: #161617;
+  padding: 0 calc(15% + 45px / 2);
+  left: 0;
+  bottom: 45px;
+  transition: 300ms;
+}
+.menu-container ul li a:hover .submenu-bg {
+  transform: translateY(calc(100vh + 45px));
+}
+.menu-container ul li a:hover .submenu {
+  transform: translateY(calc(50vh + 45px));
+}
+.menu-container ul li a .submenu-bg:hover {
+  transform: translateY(calc(-100vh - 45px));
+}
+.submenu .ls {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  position: absolute;
+}
+.submenu .ls-1 div {
+  width: 100%;
+  height: 45px;
+}
+.submenu .ls-1 span {
+  color: azure;
+  font-size: 25px;
+  font-weight: bold;
+}
+.submenu .ls-1 span.th,
+.ls-2 span.th,
+.ls-3 span.th {
+  color: #99999c !important;
+  font-size: 15px !important;
+  font-weight: 1000 !important;
+  height: fit-content !important;
+}
+.submenu .ls-2 div {
+  width: 100%;
+  height: 30px;
+}
+.submenu .ls-2 span {
+  color: azure;
+  font-size: 15px;
+  font-weight: 5000;
+}
+.submenu .ls-3 div {
+  width: 100%;
+  height: 30px;
+}
+.ls-3 div:first-child,
+.ls-2 div:first-child,
+.ls-1 div:first-child {
+  height: 45px;
+  margin-bottom: 10px;
+}
+.submenu .ls-1 {
+  width: 250px;
+  left: 15%;
+}
+.submenu .ls-2 {
+  width: 150px;
+  left: calc(15% + 350px);
+}
+.submenu .ls-3 {
+  width: 150px;
+  left: calc(15% + 600px);
+}
+.submenu .ls a {
+  color: azure;
+}
+/* ------------------------------------------ web-container--------------------------> */
+.web-container {
+  width: 100%;
+  height: calc(100vh - 45px);
+  margin-top: 45px;
+  background-color: #fbfbfd;
+}
+.web-container img {
+  width: 100%;
+  margin-bottom: 10px;
+}
