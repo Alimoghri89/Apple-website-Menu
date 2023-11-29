@@ -47,7 +47,8 @@ a {
   line-height: 45px;
 }
 .menu-title ul li a {
-  display: inline-block;
+  display: flex;
+  width: auto;
   height: 100%;
 }
 .sr-icon {
@@ -70,12 +71,12 @@ a {
   left: 0;
   bottom: 45px;
   transition: 500;
-  backdrop-filter: saturate(20%) blur(4px);
+  backdrop-filter: saturate(20%) blur(10px);
 }
 
 .menu-container ul li div.submenu {
   width: 100vw;
-  height: calc(50vh);
+  height: calc(60vh);
   position: absolute;
   background-color: #161617;
   padding: 0 calc(15% + 45px / 2);
@@ -87,7 +88,7 @@ a {
   transform: translateY(calc(100vh + 45px));
 }
 .menu-container ul li a:hover .submenu {
-  transform: translateY(calc(50vh + 45px));
+  transform: translateY(calc(60vh + 45px));
 }
 .menu-container ul li a .submenu-bg:hover {
   transform: translateY(calc(-100vh - 45px));
@@ -115,6 +116,13 @@ a {
   font-weight: 1000 !important;
   height: fit-content !important;
 }
+.submenu .ls-1 span.tf,
+.ls-2 span.tf,
+.ls-3 span.tf {
+  font-size: 15px !important;
+  font-weight: 1000 !important;
+  height: fit-content !important;
+}
 .submenu .ls-2 div {
   width: 100%;
   height: 30px;
@@ -135,16 +143,16 @@ a {
   margin-bottom: 10px;
 }
 .submenu .ls-1 {
-  width: 250px;
+  width: 300px;
   left: 15%;
 }
 .submenu .ls-2 {
   width: 150px;
-  left: calc(15% + 350px);
+  left: calc(15% + 400px);
 }
 .submenu .ls-3 {
-  width: 150px;
-  left: calc(15% + 600px);
+  width: 300px;
+  left: calc(15% + 650px);
 }
 .submenu .ls a {
   color: azure;
